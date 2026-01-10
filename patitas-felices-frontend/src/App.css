@@ -1,0 +1,160 @@
+/* App.css - Diseño Patitas Felices */
+
+/* 1. Fondo y Fuente */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6; /* Gris muy suave */
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  padding-bottom: 40px;
+}
+
+/* 2. Encabezado (Header) */
+.App-header {
+  background-color: #68b3db; 
+  padding: 20px;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0, 68, 255, 0.1);
+  margin-bottom: 30px;
+} 
+
+/* Estilo para el Logo */
+.logo-imagen {
+  width: 200px; 
+  height: auto; 
+  margin-bottom: 15px;
+  border-radius: 0%; 
+  border: 1px solid white; 
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.App-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+/* 3. Tarjetas (Los cuadros blancos) */
+/* Esto hace que tus formularios se vean como tarjetas limpias */
+div[style*="border"] {
+  background-color: white;
+  border: none !important; /* Quitamos el borde negro feo */
+  border-radius: 12px; /* Bordes redondeados */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* Sombra suave y moderna */
+  padding: 30px !important;
+  margin: 20px auto; /* Centrado */
+  max-width: 450px; /* Ancho máximo elegante */
+  transition: transform 0.2s;
+}
+
+div[style*="border"]:hover {
+  transform: translateY(-2px); /* Pequeño efecto al pasar el mouse */
+}
+
+/* 4. Campos de Texto (Inputs) */
+input, select, textarea {
+  width: 100%;
+  padding: 12px;
+  margin-top: 6px;
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 0.95rem;
+  background-color: #fafafa;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #68b3db;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(0, 150, 136, 0.1);
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  text-align: left;x
+  margin-bottom: 4px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* 5. Botones */
+button {
+  background-color: #68b3db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin: 5px;
+  width: 100%; /* Botones anchos se ven bien en móviles */
+}
+
+button:hover {
+  background-color: #68b3db;
+  transform: scale(1.02);
+}
+
+/* Estilos para botones específicos (rojo para borrar, etc.) */
+button[style*="red"] {
+  background-color: #ef5350 !important;
+}
+button[style*="red"]:hover {
+  background-color: #d32f2f !important;
+}
+
+button[style*="blue"] {
+  background-color: #42a5f5 !important;
+}
+button[style*="blue"]:hover {
+  background-color: #1e88e5 !important;
+}
+
+/* 6. Tablas (Dashboard) */
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+th {
+  background-color: #68b3db;
+  color: white;
+  padding: 15px;
+  text-align: left;
+  font-weight: 600;
+}
+
+td {
+  padding: 15px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #444;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover {
+  background-color: #f1f8f7;
+}
+
+/* Títulos */
+h2 { color: #68b3db; margin-bottom: 20px; }
+h3 { color: #68b3db; margin-top: 0; }
+hr { border: 0; height: 1px; background: #e0e0e0; margin: 25px 0; }

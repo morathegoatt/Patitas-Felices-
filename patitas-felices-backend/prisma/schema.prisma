@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model asistente {
+  id_empleado       Int      @id(map: "pk_asistente")
+  nivel_experiencia String?  @db.VarChar(50)
+  funcion_principal String?  @db.VarChar(100)
+  empleado          empleado @relation(fields: [id_empleado], references: [id_empleado], onDelete: Cascade, onUpdate: NoAction, map: "fk_asis_empleado")
+}
+
+model cita {
+  id_cita    Int       @id(map: "pk_cita") @default(autoincrement())
+  fecha      DateTime  @db.Date
+  hora       DateTime  @db.Time(6)
+  motivo     String?   @db.VarChar(255)
+  id_mascota Int
+  mascota    mascota   @relation(fields: [id_mascota], references: [id_mascota], onDelete: Cascade, onUpdate: NoAction, map: "fk_cita_mascota")
+  consulta   consulta?
+}
+
+model consulta {
+  id_consulta    Int           @id(map: "pk_consulta") @default(autoincrement())
+  diagnostico    String?
+  notas          String?
+  id_cita        Int           @unique(map: "uq_consulta_cita")
+  id_veterinario Int
+  cita           cita          @relation(fields: [id_cita], references: [id_cita], onUpdate: NoAction, map: "fk_consulta_cita")
+  veterinario    veterinario   @relation(fields: [id_veterinario], references: [id_empleado], onUpdate: NoAction, map: "fk_consulta_veterinario")
+  tratamiento    tratamiento[]
+}
+
+model due_o {
+  id_due_o      Int       @id(map: "pk_dueño") @default(autoincrement()) @map("id_dueño")
+  nombre        String    @db.VarChar(150)
+  direccion     String?   @db.VarChar(255)
+  telefono      String?   @unique @db.VarChar(15)
+  email         String?   @unique @db.VarChar(100)
+  password_hash String?   @db.VarChar(255)
+  mascota       mascota[]
+
+  @@map("dueño")
+}
+
+model empleado {
+  id_empleado        Int          @id(map: "pk_empleado")
+  nombre             String       @db.VarChar(150)
+  salario            Decimal?     @db.Decimal(10, 2)
+  fecha_contratacion DateTime?    @db.Date
+  email              String?      @unique @db.VarChar(100)
+  password_hash      String?      @db.VarChar(255)
+  asistente          asistente?
+  veterinario        veterinario?
+}
+
+model historial_clinico {
+  id_historial Int     @id(map: "pk_historial")
+  id_mascota   Int     @unique(map: "uq_historial_mascota")
+  mascota      mascota @relation(fields: [id_mascota], references: [id_mascota], onDelete: Cascade, onUpdate: NoAction, map: "fk_historial_mascota")
+}
+
+model mascota {
+  id_mascota        Int                @id(map: "pk_mascota") @default(autoincrement())
+  nombre            String             @db.VarChar(100)
+  especie           String?            @db.VarChar(50)
+  raza              String?            @db.VarChar(50)
+  fecha_nacimiento  DateTime?          @db.Date
+  sexo              String?            @db.Char(1)
+  id_due_o          Int                @map("id_dueño")
+  cita              cita[]
+  historial_clinico historial_clinico?
+  due_o             due_o              @relation(fields: [id_due_o], references: [id_due_o], onUpdate: NoAction, map: "fk_mascota_dueño")
+}
+
+model medicamento_recetado {
+  id_tratamiento Int
+  num_linea      Int
+  nombre_farmaco String      @db.VarChar(100)
+  dosis          String?     @db.VarChar(50)
+  frecuencia     String?     @db.VarChar(100)
+  tratamiento    tratamiento @relation(fields: [id_tratamiento], references: [id_tratamiento], onDelete: Cascade, onUpdate: NoAction, map: "fk_med_tratamiento")
+
+  @@id([id_tratamiento, num_linea], map: "pk_medicamento")
+}
+
+model tratamiento {
+  id_tratamiento       Int                    @id(map: "pk_tratamiento") @default(autoincrement())
+  id_consulta          Int
+  medicamento_recetado medicamento_recetado[]
+  consulta             consulta               @relation(fields: [id_consulta], references: [id_consulta], onDelete: Cascade, onUpdate: NoAction, map: "fk_tratamiento_consulta")
+}
+
+model veterinario {
+  id_empleado        Int        @id(map: "pk_veterinario")
+  cedula_profesional String     @unique @db.VarChar(20)
+  especialidad       String?    @db.VarChar(100)
+  consulta           consulta[]
+  empleado           empleado   @relation(fields: [id_empleado], references: [id_empleado], onDelete: Cascade, onUpdate: NoAction, map: "fk_vet_empleado")
+}

@@ -1,0 +1,9 @@
+# Carpeta de dependencias
+node_modules
+
+# Archivos de build (si los hubiera)
+build
+
+# Archivos .env locales
+.env.local
+.env.development.local

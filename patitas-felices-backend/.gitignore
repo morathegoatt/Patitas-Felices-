@@ -1,0 +1,6 @@
+# Archivo de secretos
+.env
+
+# Carpeta de dependencias
+node_modules
+/generated/prisma
