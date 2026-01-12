@@ -1,54 +1,61 @@
-# Proyecto Final: Patitas Felices
+# Proyecto Final: Patitas Felices 🐾
 
-Sistema de administración web para gestionar el flujo de trabajo de una clínica veterinaria: pacientes, agenda visual y consultas médicas.
+Sistema de administración web integral para gestionar el flujo de trabajo de una clínica veterinaria: control de pacientes, agenda visual interactiva y consultas médicas en tiempo real.
 
 ## 🛠️ Tecnologías
 
-* **Frontend:** HTML5, CSS3, JavaScript,React
+* **Frontend:** React, HTML5, CSS3, JavaScript
 * **Backend:** Flask (Python)
 * **Base de Datos:** Supabase (PostgreSQL)
 * **Contenedores:** Docker
 
+## 🚀 Características Principales
+
 ### ➕ Gestión de Registros
-* Registro de dueños y pacientes (mascotas).
-* Formularios dinámicos para historial médico.
+* **Pacientes y Dueños:** Módulo completo de registro y edición de perfiles.
+* **Historial Médico:** Formularios dinámicos para el seguimiento clínico.
 
 ### 🔍 Consultas e Informes
-* **Agenda Visual:** Programación de citas y recordatorios.
-* **Consulta Médica:** Interfaz dedicada para la atención veterinaria en tiempo real.
-* **Historial:** Visualización completa de consultas previas.
+* **Agenda Visual:** Calendario interactivo para programación de citas y recordatorios.
+* **Consulta Médica:** Interfaz dedicada para la atención veterinaria en tiempo real (Live Mode).
+* **Historial:** Visualización cronológica de consultas previas.
 
 ## 📂 Estructura del Proyecto
 
 ```text
-├── public/ (o assets/)
-│   ├── diagramas/           # Modelos de base de datos
-│   └── capturas/            # Imágenes de la interfaz
+├── public/
+│   ├── diagramas/           # Modelos entidad-relación
+│   └── capturas/            # Screenshots de la interfaz
 ├── src/
-│   ├── components/          # Componentes de la interfaz
-│   ├── views/               # Vistas (Registro, Agenda, Consulta)
-│   └── services/            # Conexión con Backend/Supabase
-└── index.html               # Punto de entrada
+│   ├── components/          # Átomos y componentes reutilizables
+│   ├── views/               # Vistas principales (Registro, Agenda, Consulta)
+│   └── services/            # Lógica de conexión con Supabase/Flask
+└── index.html               # Punto de entrada de la aplicación
 
-### 📊 Modelo de Datos
-![Diagrama de Base de Datos](public/diagramas/modelo-er-extendido.png)
+## Arquitectura y Diseño
 
-* **Agenda Visual:** Programación de citas y recordatorios.
-![Captura de la Agenda](public/capturas/agenda.jpeg)
+### Modelo de Base de Datos
+El siguiente diagrama muestra el modelo Entidad-Relación extendido utilizado en el proyecto:
 
-### ➕ Gestión de Registros
-* Registro de dueños y pacientes (mascotas).
-![Pantalla de Registro](public/capturas/registro.jpge)
-* Formularios dinámicos para historial médico.
+![Modelo Entidad-Relación](public/diagramas/modelo-er-extendido.jpeg)
 
-* **Consulta Médica:** Interfaz dedicada para la atención veterinaria en tiempo real.
-![Captura de Consulta](public/capturas/consulta.jpeg)
+## Galería del Proyecto
 
-* **Consulta Médica:** Interfaz dedicada para la atención veterinaria en tiempo real.
-![Atención de Consulta](public/capturas/atender-consulta.jpge)
+A continuación se muestran algunas vistas principales de la aplicación:
+
+| Login y Autenticación | Gestión de Agenda |
+|:---------------------:|:-----------------:|
+| ![Login](public/capturas/registro.jpeg) | ![Agenda](public/capturas/agenda.jpeg) |
+| **Vista de inicio de sesión** | **Módulo de citas y agenda** |
+
+| Listado de Pacientes | Vista Móvil / Detalle |
+|:--------------------:|:---------------------:|
+| ![Tabla](public/capturas/consulta.jpeg) | ![Detalle](public/capturas/atender-consulta.jpeg) |
+| **Administración de registros** | **Diseño responsivo** |         
 
 ## 🔗 Enlaces Rápidos
 
-* **Código Fuente:** [Repositorio en GitHub](https://github.com/tu-usuario/patitas-felices)
-* **Demo en Vivo (GitHub Pages):** [Patitas Felices](https://tu-usuario.github.io/patitas-felices/)
-* **Demo en Vivo (Despliegue Externo):** [Patitas Felices](https://patitas-felices-frontend.vercel.app/)
+| Recurso | Enlace |
+| :--- | :--- |
+| **Código Fuente** | [Repositorio en GitHub](https://github.com/morathegoatt/Patitas-Felices-) |
+| **Demo (Despliegue)** | [🚀 Ver App en Vercel](https://patitas-felices-frontend.vercel.app/) |
