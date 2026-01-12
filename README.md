@@ -31,6 +31,7 @@ Sistema de administración web integral para gestionar el flujo de trabajo de un
 │   ├── views/               # Vistas principales (Registro, Agenda, Consulta)
 │   └── services/            # Lógica de conexión con Supabase/Flask
 └── index.html               # Punto de entrada de la aplicación
+```
 ## Arquitectura y Diseño
 
 ### Modelo de Base de Datos
