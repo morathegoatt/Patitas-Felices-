@@ -37,8 +37,7 @@ Sistema de administración web integral para gestionar el flujo de trabajo de un
 ### Modelo de Base de Datos
 El siguiente diagrama muestra el modelo Entidad-Relación extendido utilizado en el proyecto:
 
-![Modelo Entidad-Relación](public/diagramas/modelo-er-extendido.jpeg)
-
+![image alt](https://github.com/morathegoatt/Patitas-Felices-/blob/8ec402cb86f5724bad21e23c06ca3f31300fc5f1/modelo-er-extendido.jpeg)
 
 ## Galería del Proyecto
 
