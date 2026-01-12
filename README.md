@@ -31,13 +31,12 @@ Sistema de administración web integral para gestionar el flujo de trabajo de un
 │   ├── views/               # Vistas principales (Registro, Agenda, Consulta)
 │   └── services/            # Lógica de conexión con Supabase/Flask
 └── index.html               # Punto de entrada de la aplicación
-
 ## Arquitectura y Diseño
 
 ### Modelo de Base de Datos
 El siguiente diagrama muestra el modelo Entidad-Relación extendido utilizado en el proyecto:
 
-![Modelo ER](./modelo-er-extendido.png)
+![Modelo ER](https://raw.githubusercontent.com/morathegoatt/Patitas-Felices-/main/modelo-er-extendido.png)
 
 ## Galería del Proyecto
 
@@ -45,14 +44,20 @@ A continuación se muestran algunas vistas principales de la aplicación:
 
 | Login y Autenticación | Gestión de Agenda |
 |:---------------------:|:-----------------:|
-| ![Login](./registro.jpeg) | ![Agenda](./agenda.jpeg) |
+| ![Login](https://raw.githubusercontent.com/morathegoatt/Patitas-Felices-/main/registro.jpeg) | ![Agenda](https://raw.githubusercontent.com/morathegoatt/Patitas-Felices-/main/agenda.jpeg) |
 | **Vista de inicio de sesión** | **Módulo de citas y agenda** |
 
 | Listado de Pacientes | Vista Móvil / Detalle |
 |:--------------------:|:---------------------:|
-| ![Tabla](./consulta.jpeg) | ![Detalle](./atender-consulta.jpeg) |
+| ![Tabla](https://raw.githubusercontent.com/morathegoatt/Patitas-Felices-/main/consulta.jpeg) | ![Detalle](https://raw.githubusercontent.com/morathegoatt/Patitas-Felices-/main/atender-consulta.jpeg) |
 | **Administración de registros** | **Diseño responsivo** |
 
+## 🔗 Enlaces Rápidos
+
+| Recurso | Enlace |
+| :--- | :--- |
+| **Código Fuente** | [Repositorio en GitHub](https://github.com/morathegoatt/Patitas-Felices-) |
+| **Demo (Despliegue)** | [🚀 Ver App en Vercel](https://patitas-felices-frontend.vercel.app/) |
 ## 🔗 Enlaces Rápidos
 
 | Recurso | Enlace |
