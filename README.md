@@ -39,18 +39,19 @@ El siguiente diagrama muestra el modelo Entidad-Relación extendido utilizado en
 
 ![Modelo Entidad-Relación](public/diagramas/modelo-er-extendido.jpeg)
 
+
 ## Galería del Proyecto
 
 A continuación se muestran algunas vistas principales de la aplicación:
 
 | Login y Autenticación | Gestión de Agenda |
 |:---------------------:|:-----------------:|
-| ![Login](patitas-felices-frontend/public/capturas/registro.jpeg) | ![Agenda](patitas-felices-frontend/public/capturas/agenda.jpeg) |
+| ![Login](patitas-felices-frontend/public/registro.jpeg) | ![Agenda](patitas-felices-frontend/public/agenda.jpeg) |
 | **Vista de inicio de sesión** | **Módulo de citas y agenda** |
 
 | Listado de Pacientes | Vista Móvil / Detalle |
 |:--------------------:|:---------------------:|
-| ![Tabla](patitas-felices-frontend/public/capturas/consulta.jpeg) | ![Detalle](patitas-felices-frontend/public/capturas/atender-consulta.jpeg) |
+| ![Tabla](patitas-felices-frontend/public/consulta.jpeg) | ![Detalle](patitas-felices-frontend/public/atender-consulta.jpeg) |
 | **Administración de registros** | **Diseño responsivo** |
 
 ## 🔗 Enlaces Rápidos
