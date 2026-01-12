@@ -37,7 +37,7 @@ Sistema de administración web integral para gestionar el flujo de trabajo de un
 ### Modelo de Base de Datos
 El siguiente diagrama muestra el modelo Entidad-Relación extendido utilizado en el proyecto:
 
-![Modelo ER](modelo-er-extendido.png)
+![Modelo ER](./modelo-er-extendido.png)
 
 ## Galería del Proyecto
 
@@ -45,12 +45,12 @@ A continuación se muestran algunas vistas principales de la aplicación:
 
 | Login y Autenticación | Gestión de Agenda |
 |:---------------------:|:-----------------:|
-| ![Login](registro.jpeg) | ![Agenda](agenda.jpeg) |
+| ![Login](./registro.jpeg) | ![Agenda](./agenda.jpeg) |
 | **Vista de inicio de sesión** | **Módulo de citas y agenda** |
 
 | Listado de Pacientes | Vista Móvil / Detalle |
 |:--------------------:|:---------------------:|
-| ![Tabla](consulta.jpeg) | ![Detalle](atender-consulta.jpeg) |
+| ![Tabla](./consulta.jpeg) | ![Detalle](./atender-consulta.jpeg) |
 | **Administración de registros** | **Diseño responsivo** |
 
 ## 🔗 Enlaces Rápidos
